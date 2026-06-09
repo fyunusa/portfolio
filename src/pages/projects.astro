@@ -10,7 +10,8 @@ interface Project {
 		github?: string;
 		npm?: string;
 		live?: string;
-		twitter?: string;
+		youtube?: string;
+		pypi?: string;
 	};
 }
 
@@ -23,10 +24,7 @@ const projects2026: Project[] = [
 		links: {
 			github: "https://github.com/fyunusa"
 		}
-	}
-];
-
-const projects2025: Project[] = [
+	},
 	{
 		name: "Aura CSS",
 		description: "Lightweight semantic attribute-based CSS library. Weighs ~17kb, has zero runtime, and supports classless-style styling.",
@@ -34,15 +32,6 @@ const projects2025: Project[] = [
 		tags: ["CSS", "NPM", "Frontend"],
 		links: {
 			npm: "https://www.npmjs.com/package/useaura",
-			github: "https://github.com/fyunusa"
-		}
-	},
-	{
-		name: "Wazobia AI Agent",
-		description: "AI agent designed specifically for multilingual Nigerian language translation, sentiment, and NLP tasks.",
-		status: "Shipped",
-		tags: ["AI", "NLP", "Python", "Nigerian Languages"],
-		links: {
 			github: "https://github.com/fyunusa"
 		}
 	},
@@ -56,43 +45,97 @@ const projects2025: Project[] = [
 		}
 	},
 	{
-		name: "osbts",
-		description: "An open source, lightweight bug tracking and issue ticketing system built for engineering teams.",
-		status: "Shipped",
-		tags: ["PHP", "Laravel", "MySQL", "Tailwind"],
-		links: {
-			github: "https://github.com/fyunusa"
-		}
-	},
-	{
-		name: "Slack Status Overlay",
-		description: "Chrome extension using Manifest V3, Slack OAuth, Cloudflare Worker, and a Canvas particle system to sync activity status.",
-		status: "Shipped",
-		tags: ["JavaScript", "Chrome Extension", "Cloudflare Workers", "Canvas"],
-		links: {
-			github: "https://github.com/fyunusa"
-		}
-	},
-	{
 		name: "Real Dev Live",
 		description: "Developer knowledge platform and talk show broadcasted via Riverside.fm and distributed on YouTube.",
 		status: "Live",
 		tags: ["Community", "Podcast", "Video Production"],
 		links: {
-			live: "https://realdevhq.com",
-			twitter: "https://x.com/realdevhq"
+			youtube: "https://www.youtube.com/@real_dev_hq"
+		}
+	}
+];
+
+const projects2025: Project[] = [
+	{
+		name: "PromptGuard",
+		description: "A Python framework born from industrial AI (oil & gas) reliability pain. Offers automatic retries, fallback chains, type-safe validation, unified APIs, prompt caching, and cost tracking.",
+		status: "Shipped",
+		tags: ["Python", "AI reliability", "Prompt Engineering"],
+		links: {
+			pypi: "https://pypi.org/project/promptguard-pro/",
+			github: "https://lnkd.in/d5qHzrhd"
 		}
 	},
 	{
-		name: "Query Master / ChronoBid / Specs Comply Pro",
-		description: "AI document intelligence suite built at Manaknight Digital, automating complex compliance, bidding, and document parsing.",
-		status: "Production",
-		tags: ["FastAPI", "Celery", "Redis", "AI Document Parser"],
+		name: "PromptLint",
+		description: "A CLI tool that analyzes prompts across clarity, cost, and security. Combines heuristic analysis with real token counting across 7 major model providers.",
+		status: "Shipped",
+		tags: ["CLI", "Python", "Linter", "Prompting"],
+		links: {
+			pypi: "https://pypi.org/project/promptlint/",
+			github: "https://lnkd.in/duskFCbm"
+		}
+	},
+	{
+		name: "DataForge AI",
+		description: "A free, browser-based tool that transforms raw content (PDFs, text, FAQs, conversations) into clean AI training datasets. Includes auto-detection of data issues with zero signup.",
+		status: "Shipped",
+		tags: ["AI Dataset", "React", "Data Cleaning"],
+		links: {
+			live: "https://lnkd.in/dFf8KBEM",
+			github: "https://lnkd.in/d9sQusig"
+		}
+	},
+	{
+		name: "Wazobia Agent",
+		description: "An AI chatbot designed for multilingual Nigerian languages (Hausa, Yoruba, Pidgin, and English). Tailored for natural local communication with no forced constraints.",
+		status: "Shipped",
+		tags: ["AI Chatbot", "Nigerian Languages", "NLP"],
+		links: {
+			live: "https://lnkd.in/exyywpep"
+		}
+	},
+	{
+		name: "OSBTS",
+		description: "Open-source TypeScript code generator for entities, DTOs, controllers, and services with support for NestJS, TypeORM, and Swagger.",
+		status: "Shipped",
+		tags: ["TypeScript", "NestJS", "CLI", "Code Generator"],
+		links: {
+			github: "https://lnkd.in/d2Xwb_ba",
+			npm: "https://lnkd.in/dxjwfmf5"
+		}
+	},
+	{
+		name: "Public APIs",
+		description: "A comprehensive platform to discover hundreds of free public APIs. Browse by category, filter by authentication type, and find hidden developer gems.",
+		status: "Shipped",
+		tags: ["Public API", "Directory", "Developer Tools"],
+		links: {
+			live: "https://lnkd.in/dn8DNU3G"
+		}
+	},
+	{
+		name: "AI Hub",
+		description: "A curated personal AI search engine for finding open-source models, training datasets, and engineering tools in one unified directory.",
+		status: "Shipped",
+		tags: ["AI Search", "Models", "Datasets", "Tools"],
+		links: {
+			live: "https://lnkd.in/dEeEgTsk"
+		}
+	},
+	{
+		name: "DevPlay Hub",
+		description: "A playful interface featuring interactive animations, bookmark favorites, and hidden Easter eggs — built for engineering team breaks.",
+		status: "Shipped",
+		tags: ["Frontend", "Animation", "Interactive UI"],
+		links: {
+			live: "https://lnkd.in/duuWJJPD"
+		}
 	}
 ];
 ---
 
-<Layout title="Projects — Umar Yunusa" description="Explore the personal and commercial projects shipped by Umar Yunusa: LLMesh, Aura CSS, Wazobia AI Agent, and more.">
+<Layout title="Projects — Umar Yunusa" description="Explore the personal and commercial projects shipped by Umar Yunusa: LLMesh, Aura CSS, PromptGuard, PromptLint, and more.">
 	<section class="space-y-12 py-4">
 		<div>
 			<h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl mb-4">
@@ -107,18 +150,22 @@ const projects2025: Project[] = [
 		<div class="space-y-6 pt-6 border-t border-border-custom">
 			<div class="flex items-center gap-3">
 				<h2 class="text-xl font-bold">2026 Projects</h2>
-				<span class="text-[11px] font-semibold bg-teal-500/10 text-teal-400 px-2.5 py-0.5 rounded-full border border-teal-500/20">Active</span>
+				<span class="text-[11px] font-semibold bg-teal-500/10 text-teal-600 px-2.5 py-0.5 rounded-full border border-teal-500/20">Active</span>
 			</div>
 			
 			<div class="grid gap-6">
 				{projects2026.map((project) => (
-					<div class="p-6 rounded-xl border border-border-custom bg-border-custom/5 space-y-4 hover:border-accent-custom hover:bg-border-custom/10 transition-all duration-300 group">
+					<div class="p-6 rounded-xl border border-border-custom bg-card-bg shadow-xs space-y-4 hover:border-accent-custom hover:shadow-md transition-all duration-300 group">
 						<div class="flex justify-between items-start gap-4">
 							<h3 class="text-lg font-bold group-hover:text-accent-custom transition-colors duration-200">
 								{project.name}
 							</h3>
-							<span class="text-[10px] font-bold tracking-wider uppercase bg-amber-500/15 text-amber-500 px-2 py-0.5 rounded border border-amber-500/20 whitespace-nowrap">
-								🔨 {project.status}
+							<span class={`text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 rounded border whitespace-nowrap ${
+								project.status === 'Active' ? 'bg-amber-500/10 text-amber-600 border-amber-500/20' : 
+								project.status === 'Live' ? 'bg-blue-500/10 text-blue-600 border-blue-500/20' : 
+								'bg-emerald-500/10 text-emerald-600 border-emerald-500/20'
+							}`}>
+								{project.status}
 							</span>
 						</div>
 						
@@ -137,21 +184,21 @@ const projects2025: Project[] = [
 						{project.links && (
 							<div class="flex gap-4 text-xs font-semibold pt-2 no-print">
 								{project.links.github && (
-									<a href={project.links.github} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-400 transition-colors flex items-center gap-1.5">
-										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+									<a href={project.links.github} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-500 transition-colors flex items-center gap-1.5">
+										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
 										Source
 									</a>
 								)}
 								{project.links.npm && (
-									<a href={project.links.npm} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-400 transition-colors flex items-center gap-1.5">
-										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+									<a href={project.links.npm} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-500 transition-colors flex items-center gap-1.5">
+										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
 										npm
 									</a>
 								)}
-								{project.links.live && (
-									<a href={project.links.live} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-400 transition-colors flex items-center gap-1.5">
-										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-										Live Site
+								{project.links.youtube && (
+									<a href={project.links.youtube} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-500 transition-colors flex items-center gap-1.5">
+										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+										Watch Show
 									</a>
 								)}
 							</div>
@@ -170,17 +217,13 @@ const projects2025: Project[] = [
 			
 			<div class="grid gap-6 sm:grid-cols-2">
 				{projects2025.map((project) => (
-					<div class="p-5 rounded-xl border border-border-custom bg-border-custom/3 space-y-4 hover:border-accent-custom hover:bg-border-custom/8 transition-all duration-300 group flex flex-col justify-between">
+					<div class="p-5 rounded-xl border border-border-custom bg-card-bg shadow-xs space-y-4 hover:border-accent-custom hover:shadow-md transition-all duration-300 group flex flex-col justify-between">
 						<div class="space-y-2">
 							<div class="flex justify-between items-baseline gap-2">
 								<h3 class="font-bold text-fg-custom group-hover:text-accent-custom transition-colors duration-200">
 									{project.name}
 								</h3>
-								<span class={`text-[9px] font-bold tracking-wider uppercase px-1.5 py-0.5 rounded whitespace-nowrap ${
-									project.status === 'Shipped' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 
-									project.status === 'Live' ? 'bg-blue-500/10 text-blue-400 border border-blue-500/20' : 
-									'bg-border-custom text-muted-custom border border-border-custom'
-								}`}>
+								<span class="text-[9px] font-bold tracking-wider uppercase px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 whitespace-nowrap">
 									{project.status}
 								</span>
 							</div>
@@ -190,7 +233,7 @@ const projects2025: Project[] = [
 							</p>
 						</div>
 
-						<div class="space-y-3 pt-2">
+						<div class="space-y-3 pt-3">
 							<div class="flex flex-wrap gap-1">
 								{project.tags.map((tag) => (
 									<span class="text-[9px] font-semibold bg-border-custom/30 text-fg-custom px-1.5 py-0.5 rounded">
@@ -202,19 +245,25 @@ const projects2025: Project[] = [
 							{project.links && (
 								<div class="flex gap-3 text-xs font-semibold pt-1 border-t border-border-custom/30 no-print">
 									{project.links.github && (
-										<a href={project.links.github} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-400 transition-colors flex items-center gap-1">
+										<a href={project.links.github} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-500 transition-colors flex items-center gap-1">
 											<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
 											Code
 										</a>
 									)}
+									{project.links.pypi && (
+										<a href={project.links.pypi} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-500 transition-colors flex items-center gap-1">
+											<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+											PyPI
+										</a>
+									)}
 									{project.links.npm && (
-										<a href={project.links.npm} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-400 transition-colors flex items-center gap-1">
+										<a href={project.links.npm} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-500 transition-colors flex items-center gap-1">
 											<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
 											npm
 										</a>
 									)}
 									{project.links.live && (
-										<a href={project.links.live} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-400 transition-colors flex items-center gap-1">
+										<a href={project.links.live} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-500 transition-colors flex items-center gap-1">
 											<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
 											Live
 										</a>

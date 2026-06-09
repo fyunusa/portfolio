@@ -1,0 +1,18 @@
+---
+title: "RAG Pipelines for Backend Engineers"
+date: "2025-04-10"
+description: "Going beyond the basics: how backend engineers can build and scale production-ready RAG pipelines without the fluff."
+tags: ["AI", "RAG", "Backend", "Architecture"]
+draft: false
+---
+
+Retrieval-Augmented Generation (RAG) is often explained using high-level Python libraries. While those are great for prototyping, building production-grade RAG systems requires addressing backend engineering challenges: database scaling, vector index tuning, hybrid search, caching, and rate limiting.
+
+### Essential Components of a Production RAG Pipeline:
+
+1. **Ingestion Pipeline:** Parsing and chunking data asynchronously using queues.
+2. **Embedding Generation:** Selecting the right model and handling rate limits from model providers.
+3. **Vector Storage:** Designing queries for systems like pgvector, Qdrant, or Pinecone.
+4. **Retrieval Strategy:** Implementing hybrid search (keyword + semantic search) and reranking.
+
+In this series, we will unpack how to construct a robust backend architecture for RAG.

@@ -1,0 +1,194 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+interface Project {
+	name: string;
+	description: string;
+	status: string;
+	tags: string[];
+	links?: {
+		github?: string;
+		npm?: string;
+		live?: string;
+		twitter?: string;
+	};
+}
+
+const projects2026: Project[] = [
+	{
+		name: "LLMesh",
+		description: "Open-source PHP AI SDK — framework-agnostic core (llmesh/core) with separate provider/adapter packages. Covers RAG, evals, observability, cost attribution, prompt versioning, and smart routing.",
+		status: "Active",
+		tags: ["PHP", "AI", "Laravel", "SDK", "RAG"],
+		links: {
+			github: "https://github.com/fyunusa"
+		}
+	}
+];
+
+const projects2025: Project[] = [
+	{
+		name: "Aura CSS",
+		description: "Lightweight semantic attribute-based CSS library. Weighs ~17kb, has zero runtime, and supports classless-style styling.",
+		status: "Shipped",
+		tags: ["CSS", "NPM", "Frontend"],
+		links: {
+			npm: "https://www.npmjs.com/package/useaura",
+			github: "https://github.com/fyunusa"
+		}
+	},
+	{
+		name: "Wazobia Agent",
+		description: "AI agent designed specifically for multilingual Nigerian language translation, sentiment, and NLP tasks.",
+		status: "Shipped",
+		tags: ["AI", "NLP", "Python", "Nigerian Languages"],
+		links: {
+			github: "https://github.com/fyunusa"
+		}
+	},
+	{
+		name: "OmniFile",
+		description: "Intelligent file processing and management platform featuring text extraction, format conversion, and semantic indexing.",
+		status: "Shipped",
+		tags: ["Go", "React", "Vector Search", "S3"],
+		links: {
+			github: "https://github.com/fyunusa"
+		}
+	},
+	{
+		name: "OSBTS",
+		description: "An open source, lightweight bug tracking and issue ticketing system built for engineering teams.",
+		status: "Shipped",
+		tags: ["PHP", "Laravel", "MySQL", "Tailwind"],
+		links: {
+			github: "https://github.com/fyunusa"
+		}
+	},
+	{
+		name: "Slack Status Overlay",
+		description: "Chrome extension using Manifest V3, Slack OAuth, Cloudflare Worker, and a Canvas particle system to sync activity status.",
+		status: "Shipped",
+		tags: ["JavaScript", "Chrome Extension", "Cloudflare Workers", "Canvas"],
+		links: {
+			github: "https://github.com/fyunusa"
+		}
+	},
+	{
+		name: "Real Dev Live",
+		description: "Developer knowledge platform and talk show broadcasted via Riverside.fm and distributed on YouTube.",
+		status: "Live",
+		tags: ["Community", "Podcast", "Video Production"],
+		links: {
+			live: "https://realdevhq.com",
+			twitter: "https://x.com/realdevhq"
+		}
+	},
+	{
+		name: "Query Master / ChronoBid / Specs Comply Pro",
+		description: "AI document intelligence suite built at Manaknight Digital, automating complex compliance, bidding, and document parsing.",
+		status: "Production",
+		tags: ["FastAPI", "Celery", "Redis", "AI Document Parser"],
+	}
+];
+---
+
+<Layout title="Projects — Umar Farouk Yunusa" description="Explore the personal and commercial projects shipped by Umar Farouk Yunusa: LLMesh, Aura CSS, Wazobia Agent, and more.">
+	<section class="space-y-12 py-4">
+		<div>
+			<h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl mb-4">
+				Projects
+			</h1>
+			<p class="text-muted-custom max-w-[600px] text-sm">
+				A curated collection of libraries, open-source packages, and production platforms I have built or maintain.
+			</p>
+		</div>
+
+		<!-- 2026 Projects (In Progress) -->
+		<div class="space-y-6 pt-6 border-t border-border-custom">
+			<div class="flex items-center gap-3">
+				<h2 class="text-xl font-bold">2026 Projects</h2>
+				<span class="text-xs font-semibold bg-teal-500/10 text-teal-400 px-2 py-0.5 rounded-full border border-teal-500/20">In Progress</span>
+			</div>
+			
+			<div class="grid gap-6">
+				{projects2026.map((project) => (
+					<div class="p-6 rounded-lg border border-border-custom bg-border-custom/5 space-y-4 hover:border-accent-custom transition-all group">
+						<div class="flex justify-between items-start gap-4">
+							<h3 class="text-lg font-bold group-hover:text-accent-custom transition-colors">
+								{project.name}
+							</h3>
+							<span class="text-xs font-semibold bg-amber-500/10 text-amber-500 px-2.5 py-0.5 rounded border border-amber-500/20 whitespace-nowrap">
+								🔨 {project.status}
+							</span>
+						</div>
+						
+						<p class="text-sm text-muted-custom leading-relaxed">
+							{project.description}
+						</p>
+
+						<div class="flex flex-wrap gap-1.5">
+							{project.tags.map((tag) => (
+								<span class="text-[10px] font-semibold bg-border-custom/40 text-fg-custom px-2 py-0.5 rounded border border-border-custom/50">
+									{tag}
+								</span>
+							))}
+						</div>
+
+						{project.links && (
+							<div class="flex gap-4 text-xs font-medium pt-2">
+								{project.links.github && <a href={project.links.github} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:underline">GitHub</a>}
+								{project.links.npm && <a href={project.links.npm} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:underline">npm</a>}
+								{project.links.live && <a href={project.links.live} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:underline">Visit Site</a>}
+								{project.links.twitter && <a href={project.links.twitter} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:underline">X / Twitter</a>}
+							</div>
+						)}
+					</div>
+				))}
+			</div>
+		</div>
+
+		<!-- 2025 Projects -->
+		<div class="space-y-6 pt-6 border-t border-border-custom">
+			<div class="flex items-center gap-3">
+				<h2 class="text-xl font-bold">2025 Projects</h2>
+				<span class="text-xs font-semibold bg-border-custom/40 text-muted-custom px-2 py-0.5 rounded-full border border-border-custom/50">Completed</span>
+			</div>
+			
+			<div class="grid gap-6">
+				{projects2025.map((project) => (
+					<div class="p-6 rounded-lg border border-border-custom bg-border-custom/5 space-y-4 hover:border-accent-custom transition-all group">
+						<div class="flex justify-between items-start gap-4">
+							<h3 class="text-lg font-bold group-hover:text-accent-custom transition-colors">
+								{project.name}
+							</h3>
+							<span class="text-xs font-semibold bg-border-custom text-muted-custom px-2.5 py-0.5 rounded border border-border-custom whitespace-nowrap">
+								{project.status}
+							</span>
+						</div>
+						
+						<p class="text-sm text-muted-custom leading-relaxed">
+							{project.description}
+						</p>
+
+						<div class="flex flex-wrap gap-1.5">
+							{project.tags.map((tag) => (
+								<span class="text-[10px] font-semibold bg-border-custom/40 text-fg-custom px-2 py-0.5 rounded border border-border-custom/50">
+									{tag}
+								</span>
+							))}
+						</div>
+
+						{project.links && (
+							<div class="flex gap-4 text-xs font-medium pt-2">
+								{project.links.github && <a href={project.links.github} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:underline">GitHub</a>}
+								{project.links.npm && <a href={project.links.npm} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:underline">npm</a>}
+								{project.links.live && <a href={project.links.live} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:underline">Visit Site</a>}
+								{project.links.twitter && <a href={project.links.twitter} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:underline">X / Twitter</a>}
+							</div>
+						)}
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+</Layout>

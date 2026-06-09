@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Resume — Umar Farouk Yunusa" description="Umar Farouk Yunusa's professional resume: Senior Backend & AI Engineer with experience scaling fintech systems and building AI-driven solutions.">
+	<section class="space-y-10 py-4">
+		<!-- Header with Title & Print Button -->
+		<div class="flex justify-between items-center no-print pb-4 border-b border-border-custom">
+			<h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+				Resume
+			</h1>
+			<button 
+				onclick="window.print()" 
+				class="px-4 py-2 text-xs font-semibold bg-accent-custom hover:bg-teal-600 active:bg-teal-700 text-white rounded shadow-sm hover:shadow transition-all cursor-pointer flex items-center gap-1.5"
+			>
+				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="inline"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+				Export PDF
+			</button>
+		</div>
+
+		<!-- Resume Container -->
+		<div class="space-y-10 print:space-y-8">
+			<!-- Header Details -->
+			<div class="space-y-3">
+				<div class="flex flex-col sm:flex-row justify-between sm:items-baseline gap-2">
+					<h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Umar Farouk Yunusa</h2>
+					<span class="text-sm text-muted-custom font-medium print:text-black">Kano, Nigeria (Remote / Relocation)</span>
+				</div>
+				<p class="text-base font-semibold text-accent-custom print:text-black uppercase tracking-wider text-xs">
+					Senior Backend & AI Engineer
+				</p>
+				<div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-custom font-medium print:text-black">
+					<a href="https://github.com/fyunusa" target="_blank" rel="noopener noreferrer" class="hover:text-fg-custom">github.com/fyunusa</a>
+					<span>&middot;</span>
+					<a href="https://linkedin.com/in/umar-yunusa-1463a418b" target="_blank" rel="noopener noreferrer" class="hover:text-fg-custom">linkedin.com/in/umar-yunusa-1463a418b</a>
+					<span>&middot;</span>
+					<a href="mailto:umar.yunusa@realdevhq.com" class="hover:text-fg-custom">umar.yunusa@realdevhq.com</a>
+				</div>
+			</div>
+
+			<!-- Summary -->
+			<div class="space-y-2 border-t border-border-custom pt-6 print:pt-4">
+				<h3 class="text-sm font-semibold uppercase tracking-wider text-muted-custom print:text-black">Professional Summary</h3>
+				<p class="text-sm leading-relaxed opacity-95">
+					Senior backend and full-stack engineer with 7+ years of experience constructing high-throughput APIs, event-driven microservices, and production AI systems. Former Backend Lead at MUST Company (South Korean fintech). Focused on AI/LLM engineering, RAG pipelines, and open-source PHP developer tooling. Seeking remote opportunities with engineering-focused teams globally.
+				</p>
+			</div>
+
+			<!-- Experience -->
+			<div class="space-y-4 border-t border-border-custom pt-6 print:pt-4">
+				<h3 class="text-sm font-semibold uppercase tracking-wider text-muted-custom print:text-black mb-2">Professional Experience</h3>
+				
+				<!-- Role 1 -->
+				<div class="space-y-2">
+					<div class="flex flex-col sm:flex-row justify-between gap-1">
+						<h4 class="text-base font-bold">
+							Backend Lead <span class="text-sm font-normal text-muted-custom print:text-black">&mdash; MUST Company</span>
+						</h4>
+						<span class="text-xs text-muted-custom print:text-black font-semibold">2023 &ndash; 2025 | Remote</span>
+					</div>
+					<p class="text-xs font-semibold text-accent-custom print:text-black">South Korean Fintech Firm</p>
+					<ul class="list-disc list-inside text-sm space-y-1.5 pl-2 opacity-95">
+						<li>Architected fintech systems handling <strong>500K+ daily transactions</strong> with high availability.</li>
+						<li>Led business platform (BusinessHub) system delivery, streamlining vendor integrations.</li>
+						<li>Built event-driven microservices using Node.js and PHP with sub-100ms API response latency.</li>
+						<li>Mentored junior engineers and enforced strict security standards complying with local regulations.</li>
+					</ul>
+				</div>
+
+				<!-- Role 2 -->
+				<div class="space-y-2 pt-2">
+					<div class="flex flex-col sm:flex-row justify-between gap-1">
+						<h4 class="text-base font-bold">
+							Backend Developer <span class="text-sm font-normal text-muted-custom print:text-black">&mdash; Manaknight Digital</span>
+						</h4>
+						<span class="text-xs text-muted-custom print:text-black font-semibold">2022 &ndash; 2023 | Remote</span>
+					</div>
+					<p class="text-xs font-semibold text-accent-custom print:text-black">Canada-based Software Consultancy</p>
+					<ul class="list-disc list-inside text-sm space-y-1.5 pl-2 opacity-95">
+						<li>Built scalable FastAPI (Python) web services integrated with Celery and Redis backend workers.</li>
+						<li>Developed multi-tenant document processing platforms serving 100K+ daily requests.</li>
+						<li>Architected document intelligence systems (Query Master Pro, ChronoBid Pro, Specs Comply Pro) utilizing AI.</li>
+					</ul>
+				</div>
+
+				<!-- Role 3 -->
+				<div class="space-y-2 pt-2">
+					<div class="flex flex-col sm:flex-row justify-between gap-1">
+						<h4 class="text-base font-bold">
+							Technical Lead <span class="text-sm font-normal text-muted-custom print:text-black">&mdash; Edawhtech</span>
+						</h4>
+						<span class="text-xs text-muted-custom print:text-black font-semibold">2021 &ndash; 2022 | Nigeria</span>
+					</div>
+					<p class="text-xs font-semibold text-accent-custom print:text-black">Engineering Consultancy</p>
+					<ul class="list-disc list-inside text-sm space-y-1.5 pl-2 opacity-95">
+						<li>Supervised delivery of backend platforms for public and private organizations.</li>
+						<li>Led development and optimization of a national-scale COVID-19 travel clearance portal.</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Skills -->
+			<div class="space-y-3 border-t border-border-custom pt-6 print:pt-4">
+				<h3 class="text-sm font-semibold uppercase tracking-wider text-muted-custom print:text-black mb-2">Technical Skills</h3>
+				<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+					<div>
+						<p><strong class="font-semibold">Languages:</strong> PHP, Python, TypeScript, JavaScript, SQL, HTML/CSS</p>
+						<p class="mt-1.5"><strong class="font-semibold">Frameworks:</strong> Laravel, FastAPI, NestJS, Express, Astro</p>
+						<p class="mt-1.5"><strong class="font-semibold">AI & ML:</strong> LLM Integration (Claude, OpenAI, Gemini), RAG pipelines, Vector Databases</p>
+					</div>
+					<div>
+						<p><strong class="font-semibold">Databases:</strong> PostgreSQL, MySQL, MongoDB, Redis, DynamoDB</p>
+						<p class="mt-1.5"><strong class="font-semibold">Infrastructure:</strong> AWS, Docker, GitHub Actions, Linux, Serverless</p>
+						<p class="mt-1.5"><strong class="font-semibold">Architecture:</strong> Clean Architecture, SOLID, Event-Driven microservices, OAuth2, JWT</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Open Source -->
+			<div class="space-y-3 border-t border-border-custom pt-6 print:pt-4">
+				<h3 class="text-sm font-semibold uppercase tracking-wider text-muted-custom print:text-black">Open Source Contributions</h3>
+				<ul class="list-disc list-inside text-sm space-y-1.5 pl-2 opacity-95">
+					<li><strong>LLMesh (Creator):</strong> PHP AI SDK designed to work seamlessly anywhere, including Laravel.</li>
+					<li><strong>Aura CSS (Creator):</strong> Semantic attribute-based CSS library with over 1,000+ weekly downloads on npm.</li>
+					<li><strong>Contributions:</strong> Contributed bug fixes and performance improvements to packages like urllib3 and Wagtail.</li>
+				</ul>
+			</div>
+
+			<!-- Education -->
+			<div class="space-y-3 border-t border-border-custom pt-6 print:pt-4">
+				<h3 class="text-sm font-semibold uppercase tracking-wider text-muted-custom print:text-black">Education</h3>
+				<div class="flex flex-col sm:flex-row justify-between text-sm gap-1">
+					<div>
+						<strong class="font-bold">MBA (Master of Business Administration)</strong>
+						<p class="text-xs text-muted-custom print:text-black">Dangote Business School, Bayero University Kano (In Progress)</p>
+					</div>
+					<span class="text-xs text-muted-custom print:text-black font-semibold sm:text-right">Kano, Nigeria</span>
+				</div>
+				<div class="flex flex-col sm:flex-row justify-between text-sm gap-1 pt-1">
+					<div>
+						<strong class="font-bold">B.Sc. Computer Science</strong>
+						<p class="text-xs text-muted-custom print:text-black">Bayero University Kano</p>
+					</div>
+					<span class="text-xs text-muted-custom print:text-black font-semibold sm:text-right">Kano, Nigeria</span>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>

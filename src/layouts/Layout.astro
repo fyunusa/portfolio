@@ -1,0 +1,97 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title?: string;
+	description?: string;
+	image?: string;
+}
+
+const {
+	title = "Umar Farouk Yunusa — Senior Backend & AI Engineer",
+	description = "Senior Backend & AI Engineer with 7+ years of experience building high-throughput APIs, event-driven microservices, and production AI systems.",
+	image = "/og-image.png"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://fyunusa.github.io');
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Global Metadata -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonicalURL} />
+
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(image, Astro.url)} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.url} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+		<!-- RSS Auto-Discovery -->
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed for Umar Farouk Yunusa" href="/rss.xml" />
+	</head>
+	<body class="max-w-[720px] mx-auto px-6 py-12 flex flex-col min-h-screen bg-bg-custom text-fg-custom">
+		<!-- Header / Navigation -->
+		<header class="mb-14 no-print">
+			<nav class="flex justify-between items-center">
+				<a href="/" class="text-lg font-bold tracking-tight hover:text-accent-custom transition-colors">
+					Umar Farouk Yunusa
+				</a>
+				<div class="flex space-x-6 text-sm font-medium">
+					<a href="/" class="hover:text-accent-custom transition-colors">Home</a>
+					<a href="/blog" class="hover:text-accent-custom transition-colors">Blog</a>
+					<a href="/projects" class="hover:text-accent-custom transition-colors">Projects</a>
+					<a href="/resume" class="hover:text-accent-custom transition-colors">Resume</a>
+					<a href="/about" class="hover:text-accent-custom transition-colors">About</a>
+				</div>
+			</nav>
+		</header>
+
+		<!-- Main Content -->
+		<main class="flex-grow print-container">
+			<slot />
+		</main>
+
+		<!-- Footer -->
+		<footer class="mt-20 pt-8 border-t border-border-custom text-xs text-muted-custom flex flex-col sm:flex-row justify-between items-center gap-4 no-print">
+			<div>
+				&copy; 2025 Umar Farouk Yunusa. All rights reserved.
+			</div>
+			<div class="flex items-center space-x-4">
+				<a href="https://github.com/fyunusa" target="_blank" rel="noopener noreferrer" class="hover:text-fg-custom transition-colors">GitHub</a>
+				<span>&middot;</span>
+				<a href="https://linkedin.com/in/umar-yunusa-1463a418b" target="_blank" rel="noopener noreferrer" class="hover:text-fg-custom transition-colors">LinkedIn</a>
+				<span>&middot;</span>
+				<a href="https://x.com/realdevhq" target="_blank" rel="noopener noreferrer" class="hover:text-fg-custom transition-colors">X</a>
+				<span>&middot;</span>
+				<a href="https://realdevhq.com" target="_blank" rel="noopener noreferrer" class="hover:text-fg-custom transition-colors">Real Dev</a>
+				<span>&middot;</span>
+				<a href="/rss.xml" class="hover:text-accent-custom transition-colors font-medium flex items-center gap-1">
+					<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="inline"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+					RSS
+				</a>
+			</div>
+		</footer>
+	</body>
+</html>

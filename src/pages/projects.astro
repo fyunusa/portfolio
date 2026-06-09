@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 interface Project {
 	name: string;
 	description: string;
-	status: string;
+	status: 'Active' | 'Shipped' | 'Live' | 'Production';
 	tags: string[];
 	links?: {
 		github?: string;
@@ -38,7 +38,7 @@ const projects2025: Project[] = [
 		}
 	},
 	{
-		name: "Wazobia Agent",
+		name: "Wazobia AI Agent",
 		description: "AI agent designed specifically for multilingual Nigerian language translation, sentiment, and NLP tasks.",
 		status: "Shipped",
 		tags: ["AI", "NLP", "Python", "Nigerian Languages"],
@@ -47,16 +47,16 @@ const projects2025: Project[] = [
 		}
 	},
 	{
-		name: "OmniFile",
-		description: "Intelligent file processing and management platform featuring text extraction, format conversion, and semantic indexing.",
+		name: "Omni File",
+		description: "AI-powered desktop file manager for Mac & Windows. 100% local/private — features smart folder organization, offline audio/video transcription & subtitles, deep content search, file compression/conversion.",
 		status: "Shipped",
-		tags: ["Go", "React", "Vector Search", "S3"],
+		tags: ["Node.js", "AI", "Electron", "Vector Search"],
 		links: {
 			github: "https://github.com/fyunusa"
 		}
 	},
 	{
-		name: "OSBTS",
+		name: "osbts",
 		description: "An open source, lightweight bug tracking and issue ticketing system built for engineering teams.",
 		status: "Shipped",
 		tags: ["PHP", "Laravel", "MySQL", "Tailwind"],
@@ -92,7 +92,7 @@ const projects2025: Project[] = [
 ];
 ---
 
-<Layout title="Projects — Umar Farouk Yunusa" description="Explore the personal and commercial projects shipped by Umar Farouk Yunusa: LLMesh, Aura CSS, Wazobia Agent, and more.">
+<Layout title="Projects — Umar Yunusa" description="Explore the personal and commercial projects shipped by Umar Yunusa: LLMesh, Aura CSS, Wazobia AI Agent, and more.">
 	<section class="space-y-12 py-4">
 		<div>
 			<h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl mb-4">
@@ -107,17 +107,17 @@ const projects2025: Project[] = [
 		<div class="space-y-6 pt-6 border-t border-border-custom">
 			<div class="flex items-center gap-3">
 				<h2 class="text-xl font-bold">2026 Projects</h2>
-				<span class="text-xs font-semibold bg-teal-500/10 text-teal-400 px-2 py-0.5 rounded-full border border-teal-500/20">In Progress</span>
+				<span class="text-[11px] font-semibold bg-teal-500/10 text-teal-400 px-2.5 py-0.5 rounded-full border border-teal-500/20">Active</span>
 			</div>
 			
 			<div class="grid gap-6">
 				{projects2026.map((project) => (
-					<div class="p-6 rounded-lg border border-border-custom bg-border-custom/5 space-y-4 hover:border-accent-custom transition-all group">
+					<div class="p-6 rounded-xl border border-border-custom bg-border-custom/5 space-y-4 hover:border-accent-custom hover:bg-border-custom/10 transition-all duration-300 group">
 						<div class="flex justify-between items-start gap-4">
-							<h3 class="text-lg font-bold group-hover:text-accent-custom transition-colors">
+							<h3 class="text-lg font-bold group-hover:text-accent-custom transition-colors duration-200">
 								{project.name}
 							</h3>
-							<span class="text-xs font-semibold bg-amber-500/10 text-amber-500 px-2.5 py-0.5 rounded border border-amber-500/20 whitespace-nowrap">
+							<span class="text-[10px] font-bold tracking-wider uppercase bg-amber-500/15 text-amber-500 px-2 py-0.5 rounded border border-amber-500/20 whitespace-nowrap">
 								🔨 {project.status}
 							</span>
 						</div>
@@ -135,11 +135,25 @@ const projects2025: Project[] = [
 						</div>
 
 						{project.links && (
-							<div class="flex gap-4 text-xs font-medium pt-2">
-								{project.links.github && <a href={project.links.github} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:underline">GitHub</a>}
-								{project.links.npm && <a href={project.links.npm} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:underline">npm</a>}
-								{project.links.live && <a href={project.links.live} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:underline">Visit Site</a>}
-								{project.links.twitter && <a href={project.links.twitter} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:underline">X / Twitter</a>}
+							<div class="flex gap-4 text-xs font-semibold pt-2 no-print">
+								{project.links.github && (
+									<a href={project.links.github} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-400 transition-colors flex items-center gap-1.5">
+										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+										Source
+									</a>
+								)}
+								{project.links.npm && (
+									<a href={project.links.npm} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-400 transition-colors flex items-center gap-1.5">
+										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+										npm
+									</a>
+								)}
+								{project.links.live && (
+									<a href={project.links.live} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-400 transition-colors flex items-center gap-1.5">
+										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+										Live Site
+									</a>
+								)}
 							</div>
 						)}
 					</div>
@@ -151,41 +165,63 @@ const projects2025: Project[] = [
 		<div class="space-y-6 pt-6 border-t border-border-custom">
 			<div class="flex items-center gap-3">
 				<h2 class="text-xl font-bold">2025 Projects</h2>
-				<span class="text-xs font-semibold bg-border-custom/40 text-muted-custom px-2 py-0.5 rounded-full border border-border-custom/50">Completed</span>
+				<span class="text-[11px] font-semibold bg-border-custom/40 text-muted-custom px-2.5 py-0.5 rounded-full border border-border-custom/50">Shipped</span>
 			</div>
 			
-			<div class="grid gap-6">
+			<div class="grid gap-6 sm:grid-cols-2">
 				{projects2025.map((project) => (
-					<div class="p-6 rounded-lg border border-border-custom bg-border-custom/5 space-y-4 hover:border-accent-custom transition-all group">
-						<div class="flex justify-between items-start gap-4">
-							<h3 class="text-lg font-bold group-hover:text-accent-custom transition-colors">
-								{project.name}
-							</h3>
-							<span class="text-xs font-semibold bg-border-custom text-muted-custom px-2.5 py-0.5 rounded border border-border-custom whitespace-nowrap">
-								{project.status}
-							</span>
-						</div>
-						
-						<p class="text-sm text-muted-custom leading-relaxed">
-							{project.description}
-						</p>
-
-						<div class="flex flex-wrap gap-1.5">
-							{project.tags.map((tag) => (
-								<span class="text-[10px] font-semibold bg-border-custom/40 text-fg-custom px-2 py-0.5 rounded border border-border-custom/50">
-									{tag}
+					<div class="p-5 rounded-xl border border-border-custom bg-border-custom/3 space-y-4 hover:border-accent-custom hover:bg-border-custom/8 transition-all duration-300 group flex flex-col justify-between">
+						<div class="space-y-2">
+							<div class="flex justify-between items-baseline gap-2">
+								<h3 class="font-bold text-fg-custom group-hover:text-accent-custom transition-colors duration-200">
+									{project.name}
+								</h3>
+								<span class={`text-[9px] font-bold tracking-wider uppercase px-1.5 py-0.5 rounded whitespace-nowrap ${
+									project.status === 'Shipped' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 
+									project.status === 'Live' ? 'bg-blue-500/10 text-blue-400 border border-blue-500/20' : 
+									'bg-border-custom text-muted-custom border border-border-custom'
+								}`}>
+									{project.status}
 								</span>
-							))}
+							</div>
+							
+							<p class="text-xs text-muted-custom leading-relaxed">
+								{project.description}
+							</p>
 						</div>
 
-						{project.links && (
-							<div class="flex gap-4 text-xs font-medium pt-2">
-								{project.links.github && <a href={project.links.github} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:underline">GitHub</a>}
-								{project.links.npm && <a href={project.links.npm} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:underline">npm</a>}
-								{project.links.live && <a href={project.links.live} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:underline">Visit Site</a>}
-								{project.links.twitter && <a href={project.links.twitter} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:underline">X / Twitter</a>}
+						<div class="space-y-3 pt-2">
+							<div class="flex flex-wrap gap-1">
+								{project.tags.map((tag) => (
+									<span class="text-[9px] font-semibold bg-border-custom/30 text-fg-custom px-1.5 py-0.5 rounded">
+										{tag}
+									</span>
+								))}
 							</div>
-						)}
+
+							{project.links && (
+								<div class="flex gap-3 text-xs font-semibold pt-1 border-t border-border-custom/30 no-print">
+									{project.links.github && (
+										<a href={project.links.github} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-400 transition-colors flex items-center gap-1">
+											<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+											Code
+										</a>
+									)}
+									{project.links.npm && (
+										<a href={project.links.npm} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-400 transition-colors flex items-center gap-1">
+											<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+											npm
+										</a>
+									)}
+									{project.links.live && (
+										<a href={project.links.live} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-400 transition-colors flex items-center gap-1">
+											<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+											Live
+										</a>
+									)}
+								</div>
+							)}
+						</div>
 					</div>
 				))}
 			</div>

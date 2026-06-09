@@ -8,8 +8,8 @@ interface Props {
 }
 
 const {
-	title = "Umar Farouk Yunusa — Senior Backend & AI Engineer",
-	description = "Senior Backend & AI Engineer with 7+ years of experience building high-throughput APIs, event-driven microservices, and production AI systems.",
+	title = "Umar Yunusa — Senior Backend Engineer",
+	description = "Senior Backend Engineer with 7+ years of experience specializing in Node.js, TypeScript, PHP (Laravel), and AI-Augmented Development.",
 	image = "/og-image.png"
 } = Astro.props;
 
@@ -49,21 +49,21 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://fyunusa.
 		<meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 		<!-- RSS Auto-Discovery -->
-		<link rel="alternate" type="application/rss+xml" title="RSS Feed for Umar Farouk Yunusa" href="/rss.xml" />
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed for Umar Yunusa" href="/rss.xml" />
 	</head>
-	<body class="max-w-[720px] mx-auto px-6 py-12 flex flex-col min-h-screen bg-bg-custom text-fg-custom">
+	<body class="max-w-[720px] mx-auto px-6 py-12 flex flex-col min-h-screen bg-bg-custom text-fg-custom selection:bg-teal-500/25 selection:text-teal-200">
 		<!-- Header / Navigation -->
-		<header class="mb-14 no-print">
+		<header class="mb-16 no-print">
 			<nav class="flex justify-between items-center">
-				<a href="/" class="text-lg font-bold tracking-tight hover:text-accent-custom transition-colors">
-					Umar Farouk Yunusa
+				<a href="/" class="text-xl font-bold tracking-tight hover:text-accent-custom transition-all duration-300">
+					Umar Yunusa
 				</a>
 				<div class="flex space-x-6 text-sm font-medium">
-					<a href="/" class="hover:text-accent-custom transition-colors">Home</a>
-					<a href="/blog" class="hover:text-accent-custom transition-colors">Blog</a>
-					<a href="/projects" class="hover:text-accent-custom transition-colors">Projects</a>
-					<a href="/resume" class="hover:text-accent-custom transition-colors">Resume</a>
-					<a href="/about" class="hover:text-accent-custom transition-colors">About</a>
+					<a href="/" class="hover:text-accent-custom transition-colors duration-200">Home</a>
+					<a href="/blog" class="hover:text-accent-custom transition-colors duration-200">Blog</a>
+					<a href="/projects" class="hover:text-accent-custom transition-colors duration-200">Projects</a>
+					<a href="/resume" class="hover:text-accent-custom transition-colors duration-200">Resume</a>
+					<a href="/about" class="hover:text-accent-custom transition-colors duration-200">About</a>
 				</div>
 			</nav>
 		</header>
@@ -74,20 +74,32 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://fyunusa.
 		</main>
 
 		<!-- Footer -->
-		<footer class="mt-20 pt-8 border-t border-border-custom text-xs text-muted-custom flex flex-col sm:flex-row justify-between items-center gap-4 no-print">
+		<footer class="mt-24 pt-8 border-t border-border-custom text-xs text-muted-custom flex flex-col sm:flex-row justify-between items-center gap-4 no-print">
 			<div>
-				&copy; 2025 Umar Farouk Yunusa. All rights reserved.
+				&copy; 2025 Umar Yunusa. All rights reserved.
 			</div>
 			<div class="flex items-center space-x-4">
-				<a href="https://github.com/fyunusa" target="_blank" rel="noopener noreferrer" class="hover:text-fg-custom transition-colors">GitHub</a>
+				<a href="https://github.com/fyunusa" target="_blank" rel="noopener noreferrer" class="hover:text-fg-custom transition-colors duration-200 flex items-center gap-1">
+					<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+					GitHub
+				</a>
 				<span>&middot;</span>
-				<a href="https://linkedin.com/in/umar-yunusa-1463a418b" target="_blank" rel="noopener noreferrer" class="hover:text-fg-custom transition-colors">LinkedIn</a>
+				<a href="https://linkedin.com/in/umar-yunusa-1463a418b" target="_blank" rel="noopener noreferrer" class="hover:text-fg-custom transition-colors duration-200 flex items-center gap-1">
+					<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+					LinkedIn
+				</a>
 				<span>&middot;</span>
-				<a href="https://x.com/realdevhq" target="_blank" rel="noopener noreferrer" class="hover:text-fg-custom transition-colors">X</a>
+				<a href="https://x.com/realdevhq" target="_blank" rel="noopener noreferrer" class="hover:text-fg-custom transition-colors duration-200 flex items-center gap-1">
+					<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+					X
+				</a>
 				<span>&middot;</span>
-				<a href="https://realdevhq.com" target="_blank" rel="noopener noreferrer" class="hover:text-fg-custom transition-colors">Real Dev</a>
+				<a href="https://realdevhq.com" target="_blank" rel="noopener noreferrer" class="hover:text-fg-custom transition-colors duration-200 flex items-center gap-1">
+					<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+					Real Dev
+				</a>
 				<span>&middot;</span>
-				<a href="/rss.xml" class="hover:text-accent-custom transition-colors font-medium flex items-center gap-1">
+				<a href="/rss.xml" class="hover:text-accent-custom transition-colors duration-200 font-medium flex items-center gap-1">
 					<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="inline"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
 					RSS
 				</a>

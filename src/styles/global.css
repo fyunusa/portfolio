@@ -22,18 +22,6 @@
   --color-card-bg: #ffffff; /* Clean white card backgrounds */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #07080c; /* Sleek obsidian dark theme */
-    --color-fg: #f1f5f9; /* Warm off-white */
-    --color-muted: #94a3b8; /* Slate 400 */
-    --color-border: #1e293b; /* Slate 800 */
-    --color-accent: #0d9488; /* Teal 600 */
-    --color-accent-hover: #14b8a6;
-    --color-card-bg: #11131c; /* Dark card background */
-  }
-}
-
 body {
   background-color: var(--color-bg);
   color: var(--color-fg);
@@ -122,12 +110,6 @@ body {
 .prose th {
   background-color: rgba(0, 0, 0, 0.02);
   font-weight: 600;
-}
-
-@media (prefers-color-scheme: dark) {
-  .prose th {
-    background-color: rgba(255, 255, 255, 0.03);
-  }
 }
 
 /* Custom print styling for Resume page */

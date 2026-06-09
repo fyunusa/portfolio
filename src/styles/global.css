@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:ital,wght@0,300..800;1,300..800&display=swap');
 
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
   --color-bg-custom: var(--color-bg);
   --color-fg-custom: var(--color-fg);
   --color-muted-custom: var(--color-muted);
@@ -13,22 +14,22 @@
 
 :root {
   --color-bg: #f8fafc; /* Beautiful clean slate-light background */
-  --color-fg: #0f172a; /* Rich slate 900 for high-contrast crisp text */
-  --color-muted: #475569; /* Slate 600 for description text */
+  --color-fg: #0f172a; /* Slate 900 for high-contrast crisp text */
+  --color-muted: #475569; /* Slate 600 for descriptions */
   --color-border: #e2e8f0; /* Slate 200 for clean subtle borders */
-  --color-accent: #0f766e; /* Deep teal 700 for elegant anchors and highlights */
+  --color-accent: #0f766e; /* Deep teal 700 for highlights */
   --color-accent-hover: #0d9488; /* Teal 600 for hover */
   --color-card-bg: #ffffff; /* Clean white card backgrounds */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #090a0f; /* Sleek obsidian dark theme */
+    --color-bg: #07080c; /* Sleek obsidian dark theme */
     --color-fg: #f1f5f9; /* Warm off-white */
     --color-muted: #94a3b8; /* Slate 400 */
     --color-border: #1e293b; /* Slate 800 */
     --color-accent: #0d9488; /* Teal 600 */
-    --color-accent-hover: #14b8a6; /* Teal 400 */
+    --color-accent-hover: #14b8a6;
     --color-card-bg: #11131c; /* Dark card background */
   }
 }
@@ -36,7 +37,7 @@
 body {
   background-color: var(--color-bg);
   color: var(--color-fg);
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
@@ -59,16 +60,17 @@ body {
 
 /* Minimal Markdown/prose styling */
 .prose {
-  max-width: 680px;
+  max-width: 780px;
 }
 .prose h1, .prose h2, .prose h3, .prose h4 {
-  font-weight: 700;
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
   color: var(--color-fg);
   margin-top: 1.75em;
   margin-bottom: 0.5em;
   letter-spacing: -0.025em;
 }
-.prose h1 { font-size: 1.875rem; }
+.prose h1 { font-size: 2rem; }
 .prose h2 { font-size: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.3em; }
 .prose h3 { font-size: 1.25rem; }
 .prose p { margin-top: 0em; margin-bottom: 1.25em; color: var(--color-fg); opacity: 0.95; }
@@ -87,14 +89,14 @@ body {
   color: var(--color-muted);
 }
 .prose code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.9em;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.85em;
   background-color: rgba(15, 118, 110, 0.08);
   padding: 0.2em 0.4em;
   border-radius: 4px;
 }
 .prose pre {
-  padding: 1em;
+  padding: 1.25em;
   border-radius: 8px;
   overflow-x: auto;
   background-color: #0f172a;
@@ -104,7 +106,7 @@ body {
 .prose pre code {
   background-color: transparent;
   padding: 0;
-  font-size: 0.85em;
+  font-size: 0.8em;
   color: #f1f5f9;
 }
 .prose table {
@@ -154,7 +156,6 @@ body {
   .prose h2 {
     border-bottom: 1px solid #ddd !important;
   }
-  /* Remove margins and paddings for page printing */
   @page {
     margin: 1.2cm;
   }

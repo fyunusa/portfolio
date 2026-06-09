@@ -153,56 +153,60 @@ const projects2025: Project[] = [
 				<span class="text-[11px] font-semibold bg-teal-500/10 text-teal-600 px-2.5 py-0.5 rounded-full border border-teal-500/20">Active</span>
 			</div>
 			
-			<div class="grid gap-6">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 				{projects2026.map((project) => (
-					<div class="p-6 rounded-xl border border-border-custom bg-card-bg shadow-xs space-y-4 hover:border-accent-custom hover:shadow-md transition-all duration-300 group">
-						<div class="flex justify-between items-start gap-4">
-							<h3 class="text-lg font-bold group-hover:text-accent-custom transition-colors duration-200">
-								{project.name}
-							</h3>
-							<span class={`text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 rounded border whitespace-nowrap ${
-								project.status === 'Active' ? 'bg-amber-500/10 text-amber-600 border-amber-500/20' : 
-								project.status === 'Live' ? 'bg-blue-500/10 text-blue-600 border-blue-500/20' : 
-								'bg-emerald-500/10 text-emerald-600 border-emerald-500/20'
-							}`}>
-								{project.status}
-							</span>
-						</div>
-						
-						<p class="text-sm text-muted-custom leading-relaxed">
-							{project.description}
-						</p>
-
-						<div class="flex flex-wrap gap-1.5">
-							{project.tags.map((tag) => (
-								<span class="text-[10px] font-semibold bg-border-custom/40 text-fg-custom px-2 py-0.5 rounded border border-border-custom/50">
-									{tag}
+					<div class="p-6 rounded-xl border border-border-custom bg-card-bg shadow-xs space-y-4 hover:border-accent-custom hover:shadow-md transition-all duration-300 group flex flex-col justify-between">
+						<div class="space-y-2">
+							<div class="flex justify-between items-start gap-4">
+								<h3 class="text-base font-bold group-hover:text-accent-custom transition-colors duration-200">
+									{project.name}
+								</h3>
+								<span class={`text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 rounded border whitespace-nowrap ${
+									project.status === 'Active' ? 'bg-amber-500/10 text-amber-600 border-amber-500/20' : 
+									project.status === 'Live' ? 'bg-blue-500/10 text-blue-600 border-blue-500/20' : 
+									'bg-emerald-500/10 text-emerald-600 border-emerald-500/20'
+								}`}>
+									{project.status}
 								</span>
-							))}
+							</div>
+							
+							<p class="text-xs text-muted-custom leading-relaxed">
+								{project.description}
+							</p>
 						</div>
 
-						{project.links && (
-							<div class="flex gap-4 text-xs font-semibold pt-2 no-print">
-								{project.links.github && (
-									<a href={project.links.github} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-500 transition-colors flex items-center gap-1.5">
-										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-										Source
-									</a>
-								)}
-								{project.links.npm && (
-									<a href={project.links.npm} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-500 transition-colors flex items-center gap-1.5">
-										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-										npm
-									</a>
-								)}
-								{project.links.youtube && (
-									<a href={project.links.youtube} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-500 transition-colors flex items-center gap-1.5">
-										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-										Watch Show
-									</a>
-								)}
+						<div class="space-y-3 pt-3">
+							<div class="flex flex-wrap gap-1.5">
+								{project.tags.map((tag) => (
+									<span class="text-[9px] font-semibold bg-border-custom/40 text-fg-custom px-2 py-0.5 rounded border border-border-custom/50">
+										{tag}
+									</span>
+								))}
 							</div>
-						)}
+
+							{project.links && (
+								<div class="flex gap-4 text-xs font-semibold pt-2 border-t border-border-custom/30 no-print">
+									{project.links.github && (
+										<a href={project.links.github} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-500 transition-colors flex items-center gap-1.5">
+											<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+											Source
+										</a>
+									)}
+									{project.links.npm && (
+										<a href={project.links.npm} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-500 transition-colors flex items-center gap-1.5">
+											<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+											npm
+										</a>
+									)}
+									{project.links.youtube && (
+										<a href={project.links.youtube} target="_blank" rel="noopener noreferrer" class="text-accent-custom hover:text-teal-500 transition-colors flex items-center gap-1.5">
+											<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+											YouTube
+										</a>
+									)}
+								</div>
+							)}
+						</div>
 					</div>
 				))}
 			</div>
@@ -215,7 +219,7 @@ const projects2025: Project[] = [
 				<span class="text-[11px] font-semibold bg-border-custom/40 text-muted-custom px-2.5 py-0.5 rounded-full border border-border-custom/50">Shipped</span>
 			</div>
 			
-			<div class="grid gap-6 sm:grid-cols-2">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 				{projects2025.map((project) => (
 					<div class="p-5 rounded-xl border border-border-custom bg-card-bg shadow-xs space-y-4 hover:border-accent-custom hover:shadow-md transition-all duration-300 group flex flex-col justify-between">
 						<div class="space-y-2">
